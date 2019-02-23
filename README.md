@@ -1,2 +1,2 @@
-# puzzle
+# Puzzle
 A puzzle game
