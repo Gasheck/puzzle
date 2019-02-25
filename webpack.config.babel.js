@@ -20,6 +20,11 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+
+      {
+        test: /\.jpg$/,
+        use: ['file-loader'],
+      },
     ],
   },
 
@@ -27,7 +32,7 @@ module.exports = {
 
   devServer: {
     host: 'localhost',
-    port: 3000,
+    port: 3001,
     contentBase: `./public`,
     hotOnly: true,
   },

@@ -9,7 +9,7 @@ module.exports = {
       }
     ],
     "prettier/prettier": "error",
-    "max-len": ["error", 80]
+    "max-len": ["error", 100]
   },
   "env": {
     "browser": true
