@@ -1,6 +1,6 @@
 import React from 'react';
-import Canvas from './components/canvas';
+import GameField from './components/gameField';
 
-const App = () => <Canvas />;
+const App = () => <GameField />;
 
 export default App;
