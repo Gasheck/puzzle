@@ -8,7 +8,10 @@ export const FIELD_HEIGHT = 4;
 
 export const REFERENCE_SEQUENCE = [...Array(FIELD_WIDTH * FIELD_HEIGHT).keys()];
 
+// Identifier of a label
 export const PIECE_LABEL = 'piece';
+
+// Identifier of a gap
 export const GAP_LABEL = 'gap';
 
 export const POSITION_CHANGE_ACTION = 'PIECE_POSITION_CHANGE';

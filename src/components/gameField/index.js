@@ -15,7 +15,6 @@ import {
 } from '../../constants';
 
 const GameField = ({ sequence, onPiecePositionChange, className }) => {
-
   const isGameOver = () => {
     return isEqual(sequence.map(item => item.id), REFERENCE_SEQUENCE);
   };
@@ -35,6 +34,7 @@ const GameField = ({ sequence, onPiecePositionChange, className }) => {
     const piece = find(sequence, { id });
     const gap = find(getSurroundings(sequence, piece.coords), { type: GAP_LABEL} );
 
+    // If there is no gap around the cell which has been clicked, do nothing
     if (!gap) {
       return;
     }

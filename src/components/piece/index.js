@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import img from './img.jpg';
 
-const Piece = ({ left, top, width, height, id, onClick, sourceCoords, className }) => {
+const Piece = ({ id, onClick, className }) => {
   const handleClick = () => {
     onClick(id);
   };
@@ -17,12 +17,7 @@ const Piece = ({ left, top, width, height, id, onClick, sourceCoords, className 
 };
 
 Piece.propTypes = {
-  top: PropTypes.number.isRequired,
-  left: PropTypes.number.isRequired,
-  width: PropTypes.number.isRequired,
-  height: PropTypes.number.isRequired,
   onClick: PropTypes.func.isRequired,
-  sourceCoords: PropTypes.objectOf(PropTypes.number).isRequired,
   className: PropTypes.string,
 };
 

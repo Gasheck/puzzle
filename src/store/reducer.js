@@ -8,11 +8,20 @@ import {
   POSITION_CHANGE_ACTION,
 } from '../constants';
 
+/**
+ * Each element has coordinates within the matrix
+ * @param {number} index
+ * @returns {object}
+ */
 const getCoords = index => ({
   row: Math.floor(index / FIELD_WIDTH),
   column: index % FIELD_WIDTH,
 });
 
+/**
+ * Getting a state used at the initial stage
+ * @returns {array}
+ */
 const getInitialSequence = () =>
   shuffle(REFERENCE_SEQUENCE).map((item, index) => {
     const commonData = {
@@ -29,6 +38,12 @@ const getInitialSequence = () =>
     return commonData;
 });
 
+/**
+ * The main reducer
+ * @param {array} state
+ * @param {object} action
+ * @returns {object}
+ */
 const reducer = (state = getInitialSequence(), action) => {
   const newState = [...state];
 
